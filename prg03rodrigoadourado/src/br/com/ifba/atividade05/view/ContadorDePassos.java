@@ -153,6 +153,9 @@ public class ContadorDePassos extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+
+    // ação do botão "Contar": lê os valores dos sliders (início, fim e passo)
+    // cria uma lista com os números no intervalo e exibe na lista.
     private void btnContarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnContarActionPerformed
         int i = sliInicio.getValue();
         int f = sliFim.getValue();
@@ -166,17 +169,22 @@ public class ContadorDePassos extends javax.swing.JFrame {
         
         lstContar.setModel(lista);
     }//GEN-LAST:event_btnContarActionPerformed
+    
 
+     // atualiza o rótulo lblInicio com o valor atual do slider sliInicio. 
     private void sliInicioStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliInicioStateChanged
         int i = sliInicio.getValue();
         lblInicio.setText(Integer.toString(i));
     }//GEN-LAST:event_sliInicioStateChanged
 
+      
+    // atualiza o rótulo lblFim com o valor atual do slider sliFim.
     private void sliFimStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliFimStateChanged
         int f = sliFim.getValue();
         lblFim.setText(Integer.toString(f));
     }//GEN-LAST:event_sliFimStateChanged
 
+    // Atualiza o rótulo lblPasso com o valor atual do slider sliPasso.
     private void sliPassoStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_sliPassoStateChanged
         int p = sliPasso.getValue();
         lblPasso.setText(Integer.toString(p));
