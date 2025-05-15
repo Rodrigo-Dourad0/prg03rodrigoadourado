@@ -15,6 +15,7 @@ public class TelaPagamento extends javax.swing.JFrame {
      */
     public TelaPagamento() {
         initComponents();
+      
     }
 
     /**
@@ -28,10 +29,11 @@ public class TelaPagamento extends javax.swing.JFrame {
 
         cbPagamento = new javax.swing.JComboBox<>();
         lblTipoPagamento = new javax.swing.JLabel();
-        lblRecibo = new javax.swing.JLabel();
         lblValorPagamento = new javax.swing.JLabel();
         txtValor = new javax.swing.JTextField();
         btnPagar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -54,27 +56,34 @@ public class TelaPagamento extends javax.swing.JFrame {
         });
 
         btnPagar.setText("PAGAR");
+        btnPagar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPagarActionPerformed(evt);
+            }
+        });
+
+        jScrollPane1.setViewportView(jTextPane1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblTipoPagamento)
-                            .addComponent(cbPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnPagar))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                    .addComponent(lblTipoPagamento)
+                    .addComponent(cbPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnPagar, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 124, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lblValorPagamento)
-                            .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(111, 111, 111)
-                        .addComponent(lblRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(55, 55, 55))
+                            .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(86, 86, 86))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 189, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(98, 98, 98))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -83,20 +92,28 @@ public class TelaPagamento extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblTipoPagamento)
                     .addComponent(lblValorPagamento))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(cbPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addComponent(btnPagar)
-                .addGap(15, 15, 15)
-                .addComponent(lblRecibo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(49, 49, 49)
+                        .addComponent(btnPagar, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 142, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    
+    
+    
+    
     private void cbPagamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPagamentoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbPagamentoActionPerformed
@@ -104,6 +121,43 @@ public class TelaPagamento extends javax.swing.JFrame {
     private void txtValorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtValorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtValorActionPerformed
+
+    private void btnPagarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPagarActionPerformed
+                                               
+    String texto = txtValor.getText().trim(); // Obtém o texto do campo e remove espaços extras
+
+    if (texto.equals("")) {
+        jTextPane1.setText("Digite um valor."); // Campo vazio: avisa o usuário
+        return;
+    }
+
+    double valor = 0;
+    valor = Double.parseDouble(texto);
+
+    if (valor <= 0) {
+        jTextPane1.setText("O valor não pode ser negativo."); // Garante que o valor seja positivo
+        return;
+    }
+
+    String tipo = cbPagamento.getSelectedItem().toString(); // Captura o tipo de pagamento escolhido
+    Pagamento pagamento;
+
+    if (tipo.equals("DINHEIRO")) {
+        pagamento = new PagamentoDinheiro(valor); // Cria pagamento em dinheiro
+    } else if (tipo.equals("CARTÃO")) {
+        pagamento = new PagamentoCartao(valor); // Cria pagamento com cartão
+    } else if (tipo.equals("PIX")) {
+        pagamento = new PagamentoPix(valor); // Cria pagamento via PIX
+    } else {
+        jTextPane1.setText("Tipo de pagamento inválido."); // Tipo desconhecido
+        return;
+    }
+
+    jTextPane1.setText(pagamento.imprimirRecibo()); // Mostra o recibo no painel de texto
+
+
+        
+    }//GEN-LAST:event_btnPagarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -143,7 +197,8 @@ public class TelaPagamento extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnPagar;
     private javax.swing.JComboBox<String> cbPagamento;
-    private javax.swing.JLabel lblRecibo;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextPane jTextPane1;
     private javax.swing.JLabel lblTipoPagamento;
     private javax.swing.JLabel lblValorPagamento;
     private javax.swing.JTextField txtValor;

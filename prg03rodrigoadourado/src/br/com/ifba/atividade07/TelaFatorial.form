@@ -39,7 +39,7 @@
                       <Component id="btnCalcular" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace pref="194" max="32767" attributes="0"/>
+              <EmptySpace pref="205" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -57,7 +57,7 @@
                   <Component id="lblFormula" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="lblResultado" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="169" max="32767" attributes="0"/>
+              <EmptySpace pref="147" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>

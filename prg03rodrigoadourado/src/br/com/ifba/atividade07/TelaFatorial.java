@@ -65,7 +65,7 @@ public class TelaFatorial extends javax.swing.JFrame {
                         .addComponent(spiNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(btnCalcular)))
-                .addContainerGap(194, Short.MAX_VALUE))
+                .addContainerGap(205, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -79,7 +79,7 @@ public class TelaFatorial extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblFormula)
                     .addComponent(lblResultado))
-                .addContainerGap(169, Short.MAX_VALUE))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
 
         pack();
